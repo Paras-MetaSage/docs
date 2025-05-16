@@ -1,0 +1,64 @@
+---
+title: 'Roles and Permissions in ShiftSage'
+description: 'Understanding user roles, access controls, and permission management within ShiftSage.'
+---
+
+ShiftSage employs a robust role-based access control (RBAC) system to ensure that users have appropriate access to features and data based on their responsibilities. This document outlines the default roles, custom role capabilities, and how permissions are managed.
+
+## Default User Roles
+
+ShiftSage provides a set of pre-configured roles suitable for most organizations. These roles come with a baseline set of permissions that can be customized if needed.
+
+| Role          | Primary Focus & Key Permissions                                                                                                |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| Administrator | Full system access: Manages organization settings, users, roles, policies, integrations, and can override workflows.         |
+| Manager       | Department/Team oversight: Reviews and approves overtime requests for their teams, manages team members, views team reports.     |
+| Supervisor    | Direct team lead: Reviews and approves requests for direct reports, monitors team overtime, provides input on policy adherence. |
+| Employee      | Self-service: Submits overtime requests, views personal request history and status, manages own profile.                       |
+
+## Custom Roles
+
+For organizations with specific access requirements, ShiftSage allows the creation of custom roles with granular permission assignments.
+
+### Creating a Custom Role
+
+1.  Navigate to **Settings → Roles & Permissions**.
+2.  Click on **"Create Custom Role"**.
+3.  Provide a name and description for the new role.
+4.  Select permissions from various categories, such as:
+    -   User Management (view, create, edit, delete users)
+    -   Policy Administration (view, create, edit, activate policies)
+    -   Workflow Management (view, modify approval chains, manage escalations)
+    -   Reporting Access (view specific reports, export data)
+    -   Request Management (view, approve, deny requests outside of standard workflow)
+
+### Permission Inheritance & Overrides
+
+-   Custom roles can optionally inherit permissions from a default role as a baseline.
+-   Specific permissions can then be added or removed to tailor the role precisely.
+
+## Department-Based Permissions
+
+Permissions can be scoped to specific departments or organizational units. This allows for scenarios such as:
+
+-   A `Manager` role that only has authority over the "Logistics" department.
+-   An `Administrator` role confined to a specific site or region.
+
+This ensures that users only see and manage data relevant to their area of responsibility.
+
+## Permission Audit Trail
+
+ShiftSage maintains a comprehensive audit trail for all changes related to roles and permissions:
+
+-   **What was changed**: Specific permission additions or revocations.
+-   **Who made the change**: The administrator or user responsible.
+-   **When it was changed**: Timestamp of the modification.
+
+This log is crucial for security audits, compliance, and troubleshooting access issues.
+
+## Best Practices for Managing Roles
+
+-   **Principle of Least Privilege**: Grant users only the permissions necessary to perform their duties.
+-   **Regular Audits**: Periodically review user roles and permissions to ensure they are still appropriate.
+-   **Use Groups for Assignments**: Where possible, assign roles to groups rather than individual users for easier management, especially in larger organizations (if group functionality is supported).
+-   **Clear Naming Conventions**: Use descriptive names for custom roles to easily understand their purpose.

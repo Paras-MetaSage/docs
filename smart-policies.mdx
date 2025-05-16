@@ -1,0 +1,48 @@
+---
+title: 'Configuring Smart Policies'
+description: 'Learn how to define, manage, and automate overtime rules, thresholds, and approval workflows using ShiftSage Smart Policies.'
+---
+
+ShiftSage's Smart Policies are the core of its automation capabilities. They allow administrators to define and enforce complex overtime rules, approval workflows, and escalation procedures based on various criteria and thresholds.
+
+## What are Smart Policies?
+
+Smart Policies are configurable rule sets that automatically govern how overtime requests are processed. Key functions include:
+
+-   **Automated Routing**: Directing requests through predefined approval chains.
+-   **Threshold Management**: Applying different rules or requiring additional approvals when requests exceed certain thresholds (e.g., hours, cost).
+-   **Compliance Enforcement**: Ensuring requests adhere to company policies and labor regulations.
+-   **Escalation Logic**: Automatically advancing requests if they are not actioned within specified timeframes.
+
+## Key Components of a Smart Policy
+
+When configuring a Smart Policy, you will define several key components:
+
+-   **Policy Scope**: Defines which employees, departments, or roles the policy applies to.
+-   **Conditions & Rules**: Criteria that requests must meet for the policy to apply (e.g., type of overtime, day of the week).
+-   **Approval Workflows**: The sequence of approvers or approval groups required for a request.
+    -   Can be multi-level (e.g., Supervisor → Manager → Director).
+    -   Can vary based on request thresholds.
+-   **Thresholds**: Specific limits that trigger different behaviors within the policy.
+    -   *Example Threshold*: Overtime requests exceeding 8 hours per week require an additional level of approval.
+    -   *Example Threshold*: Requests submitted less than 24 hours in advance trigger a notification to HR.
+-   **Escalation Rules**: Defines what happens if a request is not approved or rejected within a set timeframe at any stage of the workflow.
+    -   *Example Escalation*: If a request is pending with a Manager for more than 48 hours, escalate to the Director.
+-   **Notifications**: Automated alerts sent to relevant parties at different stages of the workflow or upon policy triggers.
+
+## Creating and Managing Policies
+
+1.  **Access Policy Management**: Navigate to **Settings → Smart Policies** in the ShiftSage admin interface.
+2.  **Create New or Edit Existing**: You can create a new policy from scratch or modify an existing one.
+3.  **Define Scope and Conditions**: Specify who the policy applies to and the conditions under which it is triggered.
+4.  **Configure Workflow & Thresholds**: Design the approval chain(s) and set up any relevant thresholds that modify this chain or trigger alerts.
+5.  **Set Up Escalations**: Define time limits for each approval step and the corresponding escalation path.
+6.  **Activate Policy**: Once configured, activate the policy to apply it to new overtime requests.
+
+## Policy Examples
+
+-   **Standard Overtime Policy**: Requests up to 4 hours approved by direct Supervisor; 4-8 hours by Supervisor then Manager; requests over 8 hours (threshold) also require Director approval. Escalation to next level if pending for 24 hours.
+-   **Weekend Work Policy**: All weekend requests require Manager approval, regardless of hours. Escalation to HR if pending for 12 hours.
+-   **Emergency Overtime Policy**: Expedited approval by any available Manager, bypassing standard thresholds for urgent operational needs.
+
+By leveraging Smart Policies, organizations can ensure consistent application of overtime rules, reduce manual intervention, improve compliance, and streamline the entire overtime management process.

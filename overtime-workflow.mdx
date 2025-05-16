@@ -1,0 +1,59 @@
+---
+title: 'Overtime Workflow Management'
+description: 'Understanding the end-to-end process for overtime requests, approvals, and escalations in ShiftSage.'
+---
+
+ShiftSage provides a structured and automated workflow for managing overtime requests from submission through approval, including handling escalations. This ensures consistency, policy adherence, and timely processing.
+
+## 1. Request Submission
+
+The overtime process begins when an employee or their manager submits a request:
+
+-   **Employee-Initiated**: Employees can submit requests through the ShiftSage web portal or mobile application, providing details such as date, hours, and reason.
+-   **Manager-Initiated**: Managers or supervisors can submit requests on behalf of their team members, particularly for pre-planned or urgent overtime.
+
+## 2. Policy Evaluation & Routing
+
+Once a request is submitted, ShiftSage's Smart Policies engine evaluates it:
+
+-   **Rule Check**: The request is checked against applicable policies based on the employee's role, department, and the nature of the request (e.g., overtime duration, requested time).
+-   **Threshold Analysis**: Policies define specific thresholds (e.g., maximum hours, cost limits). If a request exceeds a threshold, it may require additional approval steps or trigger specific notifications.
+-   **Workflow Assignment**: Based on the policy evaluation, the request is routed to the first designated approver in the configured multi-level approval workflow.
+
+## 3. Approval Process
+
+Approvers review requests assigned to them:
+
+-   **Notification**: Approvers receive notifications (email, in-app, mobile push) for pending requests.
+-   **Review & Action**: Approvers can:
+    -   **Approve**: If the request is valid and compliant.
+    -   **Reject**: If the request is not justified or violates policy. A reason for rejection is typically required.
+    -   **Request More Information**: Send the request back to the submitter for clarification or additional details.
+-   **Multi-Level Approvals**: Requests may pass through several approvers (e.g., Supervisor → Manager → Department Head) depending on the defined workflow and thresholds.
+
+## 4. Escalations
+
+To prevent delays, ShiftSage includes an escalation mechanism:
+
+-   **Time-Based Escalations**: If a request remains pending with an approver beyond a configured time limit (e.g., 24 hours), it can be automatically escalated.
+-   **Escalation Paths**: Escalations can route the request to:
+    -   The next level in the approval hierarchy.
+    -   A designated backup approver.
+    -   An administrator for review.
+-   **Notifications**: Relevant parties are notified when an escalation occurs.
+
+## 5. Final Status & Logging
+
+Once a request completes the workflow:
+
+-   **Status Update**: The request is marked with a final status (`Approved`, `Rejected`).
+-   **Audit Trail**: All actions, decisions, comments, and escalations related to the request are logged for audit and compliance purposes.
+-   **Payroll & Reporting**: Approved overtime data becomes available for payroll processing and inclusion in management reports.
+
+This structured workflow ensures that all overtime requests are handled consistently, policies are enforced, and decisions are auditable.
+
+## Edge Handling
+
+- Re-submissions blocked by date/employee deduplication  
+- Actions while impersonating are traceable  
+- Timestamp handling for end-of-month or holiday OT  
